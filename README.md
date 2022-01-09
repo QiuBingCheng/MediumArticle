@@ -31,7 +31,14 @@
 ## Crawler
 
 * FoodPanda [最香的爬蟲教學文-foodpanda(上)](https://medium.com/qiubingcheng/%E6%9C%80%E9%A6%99%E7%9A%84%E7%88%AC%E8%9F%B2%E6%95%99%E5%AD%B8%E6%96%87-foodpanda-%E4%B8%8A-7001ac93dfb2)
-
 * Option [期貨爬蟲：擷取期貨每日行情資料並寫入excel檔案](https://medium.com/qiubingcheng/%E7%B6%B2%E8%B7%AF%E7%88%AC%E8%9F%B2-%E6%93%B7%E5%8F%96%E6%9C%9F%E8%B2%A8%E6%AF%8F%E6%97%A5%E8%A1%8C%E6%83%85%E8%B3%87%E6%96%99%E4%B8%A6%E5%AF%AB%E5%85%A5excel%E6%AA%94%E6%A1%88-9e7bf07ad502)
+
+
+
+## Satistics
+
+* 中央極限定理 [中央極限定理(Central Limit Theorem , CLT)](https://medium.com/qiubingcheng/%E4%B8%AD%E5%A4%AE%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86-central-limit-theorem-clt-c5e47d091865)
+
+* 最大概似估計 [最大概似估計(Central Limit Theorem , CLT)](https://medium.com/qiubingcheng/%E4%B8%AD%E5%A4%AE%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86-central-limit-theorem-clt-c5e47d091865)
 
   
