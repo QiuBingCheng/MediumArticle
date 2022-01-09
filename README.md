@@ -23,8 +23,7 @@
 [[Python]淺談社會網路分析(Social Network Analysis)的度中心性(degree centrality )、介數中心性(betweenness centrality)及接近中心性(closeness centrality)](https://medium.com/qiubingcheng/python-%E6%B7%BA%E8%AB%87%E7%A4%BE%E6%9C%83%E7%B6%B2%E8%B7%AF%E5%88%86%E6%9E%90-social-network-analysis-%E7%9A%84%E5%BA%A6%E4%B8%AD%E5%BF%83%E6%80%A7-degree-centrality-%E4%BB%8B%E6%95%B8%E4%B8%AD%E5%BF%83%E6%80%A7-betweenness-9b9f01c4d088)
 
 ## Text Mining
-[以Python實作tf-idf算法，並以文字雲視覺化描述]
-(https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E4%BD%9Ctf-idf%E7%AE%97%E6%B3%95-%E4%B8%A6%E4%BB%A5%E6%96%87%E5%AD%97%E9%9B%B2%E5%91%88%E7%8F%BE-7c6698b42025)
+[以Python實作tf-idf算法，並以文字雲視覺化描述](https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E4%BD%9Ctf-idf%E7%AE%97%E6%B3%95-%E4%B8%A6%E4%BB%A5%E6%96%87%E5%AD%97%E9%9B%B2%E5%91%88%E7%8F%BE-7c6698b42025)
 
 
 ## Recommendation System
