@@ -1,0 +1,2 @@
+wordcloud==1.7.0
+jieba==0.42.1
