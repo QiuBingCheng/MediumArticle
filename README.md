@@ -27,3 +27,11 @@
 ## Recommendation System
 * Content-based Recommendation [半小時打造簡單實用的電影推薦系統(附完整python程式碼)](https://medium.com/qiubingcheng/%E5%8D%8A%E5%B0%8F%E6%99%82%E6%89%93%E9%80%A0%E7%B0%A1%E5%96%AE%E5%AF%A6%E7%94%A8%E7%9A%84%E9%9B%BB%E5%BD%B1%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1-%E9%99%84%E5%AE%8C%E6%95%B4python%E7%A8%8B%E5%BC%8F%E7%A2%BC-b372769939af)
 * User-based Collaborative Filtering [以Python實現推薦系統的協同過濾算法](https://medium.com/qiubingcheng/%E4%BB%A5python%E5%AF%A6%E7%8F%BE%E6%8E%A8%E8%96%A6%E7%B3%BB%E7%B5%B1%E7%9A%84%E5%8D%94%E5%90%8C%E9%81%8E%E6%BF%BE%E7%AE%97%E6%B3%95-d35cc1a1ec8a)
+
+## Crawler
+
+* FoodPanda [最香的爬蟲教學文-foodpanda(上)](https://medium.com/qiubingcheng/%E6%9C%80%E9%A6%99%E7%9A%84%E7%88%AC%E8%9F%B2%E6%95%99%E5%AD%B8%E6%96%87-foodpanda-%E4%B8%8A-7001ac93dfb2)
+
+* Option [期貨爬蟲：擷取期貨每日行情資料並寫入excel檔案](https://medium.com/qiubingcheng/%E7%B6%B2%E8%B7%AF%E7%88%AC%E8%9F%B2-%E6%93%B7%E5%8F%96%E6%9C%9F%E8%B2%A8%E6%AF%8F%E6%97%A5%E8%A1%8C%E6%83%85%E8%B3%87%E6%96%99%E4%B8%A6%E5%AF%AB%E5%85%A5excel%E6%AA%94%E6%A1%88-9e7bf07ad502)
+
+  
