@@ -19,26 +19,47 @@ df.drop(columns="timestamp",inplace=True)
 df = pd.merge(df, movies, on='movieId')
 #%%
 #function       
-def recommend(user,num=10):
-    #find similarity between user and other uesr.
-    user_similarity = [] 
+def recommend(user, num=10, top_n=15):
+    """Recommend n movies to the user
+    
+    Parameters
+    ----------
+    user : int
+        The user id  
+    num : int
+        Collaborative filtering based on how many users.
+    top_n : int
+        The number of the movies recommended
+        
+    Returns
+    -------
+    list
+        a list of integer representing the movie ids recommended
+    """
+   
+    
+    #calculate the similarity between the user and other users
+    similarities = []
+    user_ids = []
     for other_user in df.userId.unique():
         if other_user == user:
             continue
         print ("other user :",other_user)
         common_movies = find_common_movie(user,other_user)
-        sim = cal_user_similarity_with_movie_rating(user,other_user,common_movies)
-        user_similarity.append([other_user,sim])
+        sim = cal_similarity_for_movie_ratings(user,other_user,common_movies)
+        similarities.append(sim)
+        user_ids.apend(other_user)
     
-    #find top 10 similar user
-    user_similarity = np.array(user_similarity)
-    sorted_index = np.argsort(user_similarity, axis=0)[:,1][::-1][:10]
-    top10_similar_user = user_similarity[:,0][sorted_index] 
+    #find top n similar users
+    similarities = np.array(similarities)
+    sorted_index = np.argsort(similarities)[::-1][:top_n]
+    most_similar_users = user_ids[sorted_index] 
     
     #find the movie the user haven't seen
+    #TODO: make the code elegant
     seen_movies = df.loc[df["userId"]==user,"movieId"].values
     not_seen_movies = defaultdict(list) 
-    for similar_user in top10_similar_user:
+    for similar_user in most_similar_users:
         movies = df.loc[df.userId==similar_user,["movieId","rating"]].values.tolist()
         if isinstance(movies[0], list):
             for movie in movies:
@@ -57,14 +78,13 @@ def recommend(user,num=10):
     top10_rating = sorted(not_seen_movies.items(), key=lambda x: x[1], reverse=True)
     return [movie for movie,rating in top10_rating][:num]
 
-
 def find_common_movie(user1,user2):
-    """找尋兩個uesr共同觀看過電影"""
+    """Find movies that both users have watched"""
     s1 = set((df.loc[df["userId"]==user1,"movieId"].values))
     s2 = set((df.loc[df["userId"]==user2,"movieId"].values))
     return s1.intersection(s2)
 
-def cosine_similarity(vec1, vec2):
+def cal_cosine_similarity(vec1, vec2):
     """
     計算兩個向量之間的餘弦相似性
     :param vec1: 向量 a 
@@ -79,13 +99,13 @@ def cosine_similarity(vec1, vec2):
     sim = 0.5 + 0.5 * cos
     return sim
 
-def cal_user_similarity_with_movie_rating(user1,user2,movies_id):
-    """計算兩個user對於特定電影評分的相似度"""
+def cal_similarity_for_movie_ratings(user1,user2,movies_id):
+    """Calculate the similarity for movie ratings between user1 and user2"""
     u1 = df[df["userId"]==user1]
     u2 = df[df["userId"]==user2]
     vec1 = u1[u1.movieId.isin(movies_id)].sort_values(by="movieId")["rating"].values
     vec2 = u2[u2.movieId.isin(movies_id)].sort_values(by="movieId")["rating"].values
-    return cosine_similarity(vec1, vec2)
+    return cal_cosine_similarity(vec1, vec2)
 
 #%%
 top10_movie = recommend(1,num=10)
