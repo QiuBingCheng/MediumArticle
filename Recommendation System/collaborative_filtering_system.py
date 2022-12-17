@@ -46,7 +46,7 @@ def find_common_movies(user1,user2):
     return s1.intersection(s2)
 
 # recommend     
-def recommend(user_id, num=10, top_n=15):
+def recommend(user, num=10, top_n=15):
     """Recommend n movies to the user
     
     Parameters
