@@ -17,6 +17,7 @@ movies.drop(columns="genres",inplace=True)
 df = pd.read_csv(r"dataset\MovieLens\ratings.csv")
 df.drop(columns="timestamp",inplace=True)
 df = pd.merge(df, movies, on='movieId')
+print(df.head())
 #%%
 #function       
 def recommend(user, num=10, top_n=15):
@@ -45,7 +46,7 @@ def recommend(user, num=10, top_n=15):
         if other_user == user:
             continue
         print ("other user :",other_user)
-        common_movies = find_common_movie(user,other_user)
+        common_movies = find_common_movies(user,other_user)
         sim = cal_similarity_for_movie_ratings(user,other_user,common_movies)
         similarities.append(sim)
         user_ids.apend(other_user)
@@ -57,10 +58,15 @@ def recommend(user, num=10, top_n=15):
     
     #find the movie the user haven't seen
     #TODO: make the code elegant
+    not_seen_movies = np.unique(df.loc[df["userId"]!=user,"movieId"].values)
+    not_seen_movies_ratings = np.zeros((len(not_seen_movies),num))
+    not_seen_movies_ratings
+    
     seen_movies = df.loc[df["userId"]==user,"movieId"].values
     not_seen_movies = defaultdict(list) 
     for similar_user in most_similar_users:
         movies = df.loc[df.userId==similar_user,["movieId","rating"]].values.tolist()
+        
         if isinstance(movies[0], list):
             for movie in movies:
                 if movie[0] in seen_movies:
@@ -78,19 +84,14 @@ def recommend(user, num=10, top_n=15):
     top10_rating = sorted(not_seen_movies.items(), key=lambda x: x[1], reverse=True)
     return [movie for movie,rating in top10_rating][:num]
 
-def find_common_movie(user1,user2):
+def find_common_movies(user1,user2):
     """Find movies that both users have watched"""
     s1 = set((df.loc[df["userId"]==user1,"movieId"].values))
     s2 = set((df.loc[df["userId"]==user2,"movieId"].values))
     return s1.intersection(s2)
 
 def cal_cosine_similarity(vec1, vec2):
-    """
-    計算兩個向量之間的餘弦相似性
-    :param vec1: 向量 a 
-    :param vec2: 向量 b
-    :return: sim
-    """
+    """Calculate cosine of two vectors"""
     vec1 = np.mat(vec1)
     vec2 = np.mat(vec2)
     num = float(vec1 * vec2.T)
@@ -99,13 +100,14 @@ def cal_cosine_similarity(vec1, vec2):
     sim = 0.5 + 0.5 * cos
     return sim
 
-def cal_similarity_for_movie_ratings(user1,user2,movies_id):
+def cal_similarity_for_movie_ratings(user1,user2,movies_id,method="cosine"):
     """Calculate the similarity for movie ratings between user1 and user2"""
     u1 = df[df["userId"]==user1]
     u2 = df[df["userId"]==user2]
     vec1 = u1[u1.movieId.isin(movies_id)].sort_values(by="movieId")["rating"].values
     vec2 = u2[u2.movieId.isin(movies_id)].sort_values(by="movieId")["rating"].values
-    return cal_cosine_similarity(vec1, vec2)
+    if method=="cosin":        
+        return cal_cosine_similarity(vec1, vec2)
 
 #%%
 top10_movie = recommend(1,num=10)
