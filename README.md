@@ -39,7 +39,7 @@
 
 * 中央極限定理 [中央極限定理(Central Limit Theorem , CLT)](https://medium.com/qiubingcheng/%E4%B8%AD%E5%A4%AE%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86-central-limit-theorem-clt-c5e47d091865)
 * 最大概似估計 [最大概似估計(Maximum Likelihood Estimation, MLE)](https://medium.com/qiubingcheng/%E4%B8%AD%E5%A4%AE%E6%A5%B5%E9%99%90%E5%AE%9A%E7%90%86-central-limit-theorem-clt-c5e47d091865)
-* 白核密度估計 [白話解釋核密度估計(Kernel Density Estimation, KDE)](https://medium.com/qiubingcheng/%E7%99%BD%E8%A9%B1%E8%A7%A3%E9%87%8B%E6%A0%B8%E5%AF%86%E5%BA%A6%E4%BC%B0%E8%A8%88-kernel-density-estimation-18c4913f0b6a?sk=5bcfd7ed936679d32ad958487a850e11)
+* 核密度估計 [白話解釋核密度估計(Kernel Density Estimation, KDE)](https://medium.com/qiubingcheng/%E7%99%BD%E8%A9%B1%E8%A7%A3%E9%87%8B%E6%A0%B8%E5%AF%86%E5%BA%A6%E4%BC%B0%E8%A8%88-kernel-density-estimation-18c4913f0b6a?sk=5bcfd7ed936679d32ad958487a850e11)
 * 貝氏定理 [貝氏定理(Bayes’ Theorem)](https://medium.com/qiubingcheng/%E8%B2%9D%E6%B0%8F%E5%AE%9A%E7%90%86-bayes-theorem-9529cd9e7952?sk=2ff4946c48c91b8de70f0eceed09a43f)
 * 型一/二錯誤 [如何計算型一錯誤(Type I Error)、型二錯誤(**Type II Error**)的機率](https://medium.com/qiubingcheng/%E5%A6%82%E4%BD%95%E8%A8%88%E7%AE%97%E5%9E%8B%E4%B8%80%E9%8C%AF%E8%AA%A4-type-i-error-%E5%9E%8B%E4%BA%8C%E9%8C%AF%E8%AA%A4-type-ii-error-%E7%9A%84%E6%A9%9F%E7%8E%87-ef0181848f75?sk=2dfb15b3cb0e1c890412a19eb3a34ca5)
 * 顯著性檢定 [簡單線性回歸的顯著性檢定(Significance test)](https://medium.com/qiubingcheng/%E7%B0%A1%E5%96%AE%E7%B7%9A%E6%80%A7%E5%9B%9E%E6%AD%B8%E7%9A%84%E9%A1%AF%E8%91%97%E6%80%A7%E6%AA%A2%E5%AE%9A-13defeeaad65?sk=bd86e0eb3e16d2568f17099de4f270c0)
